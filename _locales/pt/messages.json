@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "fearly.eu — Encurtador de URLs"
+  },
+  "ext_description": {
+    "message": "Encurte instantaneamente o URL do separador ativo com fearly.eu"
+  },
+  "popup_shorten": {
+    "message": "Encurtar"
+  },
+  "popup_copy": {
+    "message": "Copiar"
+  },
+  "popup_copied": {
+    "message": "Copiado!"
+  },
+  "popup_open": {
+    "message": "Abrir"
+  },
+  "popup_settings": {
+    "message": "Definições"
+  },
+  "popup_placeholder": {
+    "message": "O URL aparecerá aqui…"
+  },
+  "popup_shortening": {
+    "message": "A encurtar…"
+  },
+  "popup_error_empty": {
+    "message": "Nenhum URL para encurtar."
+  },
+  "popup_error_failed": {
+    "message": "Não foi possível encurtar o URL. Tente novamente."
+  },
+  "popup_not_setup": {
+    "message": "Configure primeiro a sua conta."
+  },
+  "popup_go_settings": {
+    "message": "Abrir definições"
+  },
+  "popup_anonymous": {
+    "message": "Anónimo"
+  },
+  "settings_title": {
+    "message": "Definições fearly.eu"
+  },
+  "settings_account": {
+    "message": "Conta"
+  },
+  "settings_account_type": {
+    "message": "Tipo de conta"
+  },
+  "settings_account_number": {
+    "message": "Número de conta"
+  },
+  "settings_api_key": {
+    "message": "Chave de API"
+  },
+  "settings_api_key_show": {
+    "message": "Mostrar"
+  },
+  "settings_api_key_hide": {
+    "message": "Ocultar"
+  },
+  "settings_api_key_copy": {
+    "message": "Copiar chave"
+  },
+  "settings_api_key_copied": {
+    "message": "Copiado!"
+  },
+  "settings_logout": {
+    "message": "Desligar"
+  },
+  "settings_logout_confirm": {
+    "message": "As suas credenciais serão removidas deste browser. Continuar?"
+  },
+  "settings_logout_warning": { "message": "Se se desligar sem guardar o número de conta, perderá permanentemente o acesso à sua conta." },
+  "settings_logout_cancel":  { "message": "Cancelar" },
+  "settings_dashboard": {
+    "message": "Abrir o painel fearly"
+  },
+  "settings_connect_other": {
+    "message": "Ligar outra conta"
+  },
+  "wizard_step1_title": {
+    "message": "Bem-vindo ao fearly.eu"
+  },
+  "wizard_step1_subtitle": {
+    "message": "Já tem uma conta fearly.eu?"
+  },
+  "wizard_btn_yes": {
+    "message": "Sim"
+  },
+  "wizard_btn_no": {
+    "message": "Não"
+  },
+  "wizard_step2_title": {
+    "message": "Iniciar sessão"
+  },
+  "wizard_tab_code": {
+    "message": "Número de conta"
+  },
+  "wizard_tab_email": {
+    "message": "E-mail e palavra-passe"
+  },
+  "wizard_code_placeholder": {
+    "message": "O seu número de conta com 23 caracteres"
+  },
+  "wizard_email_placeholder": {
+    "message": "Endereço de e-mail"
+  },
+  "wizard_pass_placeholder": {
+    "message": "Palavra-passe"
+  },
+  "wizard_btn_signin": {
+    "message": "Iniciar sessão"
+  },
+  "wizard_signing_in": {
+    "message": "A iniciar sessão…"
+  },
+  "wizard_step3_title": {
+    "message": "Chave de API"
+  },
+  "wizard_step3_subtitle": {
+    "message": "Já tem uma chave de API fearly.eu?"
+  },
+  "wizard_btn_have_key": {
+    "message": "Sim, tenho uma chave"
+  },
+  "wizard_btn_create_key": {
+    "message": "Não, gerar uma chave"
+  },
+  "wizard_step4a_title": {
+    "message": "Introduza a sua chave de API"
+  },
+  "wizard_key_placeholder": {
+    "message": "fearly_…"
+  },
+  "wizard_btn_save_key": {
+    "message": "Guardar e continuar"
+  },
+  "wizard_step4b_title": {
+    "message": "A gerar chave de API…"
+  },
+  "wizard_done_title": {
+    "message": "Tudo pronto!"
+  },
+  "wizard_done_subtitle": {
+    "message": "A sua conta está ligada. Já pode encurtar URLs."
+  },
+  "wizard_btn_start": {
+    "message": "Começar"
+  },
+  "wizard_step_new_title": {
+    "message": "A criar conta…"
+  },
+  "wizard_new_done_title": {
+    "message": "Conta criada!"
+  },
+  "wizard_new_done_subtitle": {
+    "message": "Guarde o seu número de conta — irá precisar dele para iniciar sessão noutros dispositivos."
+  },
+  "wizard_save_number": {
+    "message": "Guardar número de conta"
+  },
+  "wizard_save_key": {
+    "message": "Guardar chave de API"
+  },
+  "error_network": {
+    "message": "Erro de rede. Verifique a sua ligação à internet."
+  },
+  "error_invalid_key": {
+    "message": "Chave de API não reconhecida. Verifique e tente novamente."
+  },
+  "error_invalid_creds": {
+    "message": "Conta não encontrada ou palavra-passe incorreta."
+  },
+  "error_rate_limit": {
+    "message": "Demasiadas tentativas. Tente novamente mais tarde."
+  },
+  "error_generic": {
+    "message": "Algo correu mal. Por favor, tente novamente."
+  },
+  "label_extension": {
+    "message": "Extensão Chrome"
+  },
+  "footer_privacy": {
+    "message": "Política de privacidade"
+  },
+  "footer_terms": {
+    "message": "Termos de serviço"
+  },
+  "footer_bug": {
+    "message": "Reportar um bug"
+  },
+  "footer_review": {
+    "message": "Escrever uma avaliação"
+  },
+  "settings_no_options": {
+    "message": "Mais opções em breve."
+  }
+}

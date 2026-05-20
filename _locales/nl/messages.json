@@ -1,0 +1,83 @@
+{
+  "ext_name":        { "message": "fearly.eu — URL Verkorten" },
+  "ext_description": { "message": "Verkort de URL van het huidige tabblad direct met fearly.eu" },
+
+  "popup_shorten":      { "message": "Verkort" },
+  "popup_copy":         { "message": "Kopieer" },
+  "popup_copied":       { "message": "Gekopieerd!" },
+  "popup_open":         { "message": "Openen" },
+  "popup_settings":     { "message": "Instellingen" },
+  "popup_placeholder":  { "message": "URL verschijnt hier…" },
+  "popup_shortening":   { "message": "Bezig met verkorten…" },
+  "popup_error_empty":  { "message": "Geen URL om te verkorten." },
+  "popup_error_failed": { "message": "URL verkorten mislukt. Probeer opnieuw." },
+  "popup_not_setup":    { "message": "Heb je al een fearly.eu account?" },
+  "popup_go_settings":  { "message": "Open instellingen" },
+  "popup_anonymous":    { "message": "Anoniem" },
+
+  "settings_title":          { "message": "fearly.eu Instellingen" },
+  "settings_account":        { "message": "Account" },
+  "settings_account_type":   { "message": "Accounttype" },
+  "settings_account_number": { "message": "Accountnummer" },
+  "settings_api_key":        { "message": "API sleutel" },
+  "settings_api_key_show":   { "message": "Toon" },
+  "settings_api_key_hide":   { "message": "Verberg" },
+  "settings_api_key_copy":   { "message": "Kopieer sleutel" },
+  "settings_api_key_copied": { "message": "Gekopieerd!" },
+  "settings_logout":         { "message": "Ontkoppelen" },
+  "settings_logout_confirm": { "message": "Dit verwijdert je gegevens uit deze browser. Doorgaan?" },
+  "settings_logout_warning": { "message": "Als je loskoppelt zonder je accountnummer op te slaan, verlies je voor altijd de toegang tot je account." },
+  "settings_logout_cancel":  { "message": "Annuleer" },
+  "settings_dashboard":      { "message": "Open fearly dashboard" },
+  "settings_connect_other":    { "message": "Ander account verbinden" },
+
+"footer_privacy":  { "message": "Privacyverklaring" },
+  "footer_terms":    { "message": "Gebruiksvoorwaarden" },
+  "footer_bug":      { "message": "Bug melden" },
+  "footer_review":   { "message": "Review schrijven" },
+
+  "settings_no_options": { "message": "Meer opties komen binnenkort." },
+
+  "wizard_step1_title":     { "message": "Welkom bij fearly.eu" },
+  "wizard_step1_subtitle":  { "message": "Heb je al een fearly.eu account?" },
+  "wizard_btn_yes":         { "message": "Ja" },
+  "wizard_btn_no":          { "message": "Nee" },
+
+  "wizard_step2_title":     { "message": "Inloggen" },
+  "wizard_tab_code":        { "message": "Accountnummer" },
+  "wizard_tab_email":       { "message": "E-mail & wachtwoord" },
+  "wizard_code_placeholder":  { "message": "Jouw 23-cijferig accountnummer" },
+  "wizard_email_placeholder": { "message": "E-mailadres" },
+  "wizard_pass_placeholder":  { "message": "Wachtwoord" },
+  "wizard_btn_signin":      { "message": "Inloggen" },
+  "wizard_signing_in":      { "message": "Bezig met inloggen…" },
+
+  "wizard_step3_title":     { "message": "API sleutel" },
+  "wizard_step3_subtitle":  { "message": "Heb je al een fearly.eu API sleutel?" },
+  "wizard_btn_have_key":    { "message": "Ja, ik heb een sleutel" },
+  "wizard_btn_create_key":  { "message": "Nee, genereer er één" },
+
+  "wizard_step4a_title":    { "message": "Voer je API sleutel in" },
+  "wizard_key_placeholder": { "message": "fearly_…" },
+  "wizard_btn_save_key":    { "message": "Opslaan & doorgaan" },
+
+  "wizard_step4b_title":    { "message": "API sleutel genereren…" },
+
+  "wizard_done_title":      { "message": "Klaar!" },
+  "wizard_done_subtitle":   { "message": "Je account is verbonden. Je kan nu URL's verkorten." },
+  "wizard_btn_start":       { "message": "Begin met verkorten" },
+
+  "wizard_step_new_title":    { "message": "Account aanmaken…" },
+  "wizard_new_done_title":    { "message": "Account aangemaakt!" },
+  "wizard_new_done_subtitle": { "message": "Bewaar je accountnummer — je hebt het nodig om in te loggen op andere apparaten." },
+  "wizard_save_number":       { "message": "Accountnummer opslaan" },
+  "wizard_save_key":          { "message": "API sleutel opslaan" },
+
+  "error_network":       { "message": "Netwerkfout. Controleer je internetverbinding." },
+  "error_invalid_key":   { "message": "API sleutel niet herkend. Controleer en probeer opnieuw." },
+  "error_invalid_creds": { "message": "Account niet gevonden of verkeerd wachtwoord." },
+  "error_rate_limit":    { "message": "Te veel pogingen. Probeer later opnieuw." },
+  "error_generic":       { "message": "Er ging iets mis. Probeer opnieuw." },
+
+  "label_extension": { "message": "Chrome Extensie" }
+}

@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "fearly.eu — URL-rövidítő"
+  },
+  "ext_description": {
+    "message": "Rövidítsd meg az aktív lap URL-jét azonnal a fearly.eu segítségével"
+  },
+  "popup_shorten": {
+    "message": "Rövidítés"
+  },
+  "popup_copy": {
+    "message": "Másolás"
+  },
+  "popup_copied": {
+    "message": "Másolva!"
+  },
+  "popup_open": {
+    "message": "Megnyitás"
+  },
+  "popup_settings": {
+    "message": "Beállítások"
+  },
+  "popup_placeholder": {
+    "message": "Az URL itt jelenik meg…"
+  },
+  "popup_shortening": {
+    "message": "Rövidítés folyamatban…"
+  },
+  "popup_error_empty": {
+    "message": "Nincs rövidítendő URL."
+  },
+  "popup_error_failed": {
+    "message": "Az URL rövidítése nem sikerült. Próbáld újra."
+  },
+  "popup_not_setup": {
+    "message": "Előbb állítsd be a fiókodat."
+  },
+  "popup_go_settings": {
+    "message": "Beállítások megnyitása"
+  },
+  "popup_anonymous": {
+    "message": "Névtelen"
+  },
+  "settings_title": {
+    "message": "fearly.eu beállítások"
+  },
+  "settings_account": {
+    "message": "Fiók"
+  },
+  "settings_account_type": {
+    "message": "Fiók típusa"
+  },
+  "settings_account_number": {
+    "message": "Fiókszám"
+  },
+  "settings_api_key": {
+    "message": "API-kulcs"
+  },
+  "settings_api_key_show": {
+    "message": "Megjelenítés"
+  },
+  "settings_api_key_hide": {
+    "message": "Elrejtés"
+  },
+  "settings_api_key_copy": {
+    "message": "Kulcs másolása"
+  },
+  "settings_api_key_copied": {
+    "message": "Másolva!"
+  },
+  "settings_logout": {
+    "message": "Leválasztás"
+  },
+  "settings_logout_confirm": {
+    "message": "Ez eltávolítja a hitelesítő adataidat ebből a böngészőből. Folytatod?"
+  },
+  "settings_logout_warning": { "message": "Ha fiókszámod mentése nélkül leválasztasz, véglegesen elveszíted a hozzáférést fiókodhoz." },
+  "settings_logout_cancel":  { "message": "Mégse" },
+  "settings_dashboard": {
+    "message": "fearly irányítópult megnyitása"
+  },
+  "settings_connect_other": {
+    "message": "Másik fiók csatlakoztatása"
+  },
+  "wizard_step1_title": {
+    "message": "Üdvözlünk a fearly.eu-n"
+  },
+  "wizard_step1_subtitle": {
+    "message": "Van már fearly.eu fiókod?"
+  },
+  "wizard_btn_yes": {
+    "message": "Igen"
+  },
+  "wizard_btn_no": {
+    "message": "Nem"
+  },
+  "wizard_step2_title": {
+    "message": "Bejelentkezés"
+  },
+  "wizard_tab_code": {
+    "message": "Fiókszám"
+  },
+  "wizard_tab_email": {
+    "message": "E-mail és jelszó"
+  },
+  "wizard_code_placeholder": {
+    "message": "A 23 karakteres fiókszámod"
+  },
+  "wizard_email_placeholder": {
+    "message": "E-mail cím"
+  },
+  "wizard_pass_placeholder": {
+    "message": "Jelszó"
+  },
+  "wizard_btn_signin": {
+    "message": "Bejelentkezés"
+  },
+  "wizard_signing_in": {
+    "message": "Bejelentkezés folyamatban…"
+  },
+  "wizard_step3_title": {
+    "message": "API-kulcs"
+  },
+  "wizard_step3_subtitle": {
+    "message": "Van már fearly.eu API-kulcsod?"
+  },
+  "wizard_btn_have_key": {
+    "message": "Igen, van kulcsom"
+  },
+  "wizard_btn_create_key": {
+    "message": "Nem, generálj egyet"
+  },
+  "wizard_step4a_title": {
+    "message": "Add meg az API-kulcsodat"
+  },
+  "wizard_key_placeholder": {
+    "message": "fearly_…"
+  },
+  "wizard_btn_save_key": {
+    "message": "Mentés és tovább"
+  },
+  "wizard_step4b_title": {
+    "message": "API-kulcs generálása…"
+  },
+  "wizard_done_title": {
+    "message": "Minden kész!"
+  },
+  "wizard_done_subtitle": {
+    "message": "A fiókod csatlakoztatva. Most már rövidítheted az URL-eket."
+  },
+  "wizard_btn_start": {
+    "message": "Kezdjük"
+  },
+  "wizard_step_new_title": {
+    "message": "Fiók létrehozása…"
+  },
+  "wizard_new_done_title": {
+    "message": "Fiók létrehozva!"
+  },
+  "wizard_new_done_subtitle": {
+    "message": "Mentsd el a fiókszámodat — más eszközökön a bejelentkezéshez szükséged lesz rá."
+  },
+  "wizard_save_number": {
+    "message": "Fiókszám mentése"
+  },
+  "wizard_save_key": {
+    "message": "API-kulcs mentése"
+  },
+  "error_network": {
+    "message": "Hálózati hiba. Ellenőrizd az internetkapcsolatod."
+  },
+  "error_invalid_key": {
+    "message": "Az API-kulcs nem ismerhető fel. Ellenőrizd és próbáld újra."
+  },
+  "error_invalid_creds": {
+    "message": "A fiók nem található vagy helytelen a jelszó."
+  },
+  "error_rate_limit": {
+    "message": "Túl sok próbálkozás. Próbáld meg később."
+  },
+  "error_generic": {
+    "message": "Valami hiba történt. Kérjük, próbáld újra."
+  },
+  "label_extension": {
+    "message": "Chrome-bővítmény"
+  },
+  "footer_privacy": {
+    "message": "Adatvédelmi irányelvek"
+  },
+  "footer_terms": {
+    "message": "Felhasználási feltételek"
+  },
+  "footer_bug": {
+    "message": "Hiba bejelentése"
+  },
+  "footer_review": {
+    "message": "Értékelés írása"
+  },
+  "settings_no_options": {
+    "message": "Több lehetőség hamarosan."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ext_name":        { "message": "fearly.eu — URL Shortener" },
+  "ext_description": { "message": "Shorten the current tab's URL instantly with fearly.eu" },
+
+  "popup_shorten":      { "message": "Shorten" },
+  "popup_copy":         { "message": "Copy" },
+  "popup_copied":       { "message": "Copied!" },
+  "popup_open":         { "message": "Open" },
+  "popup_settings":     { "message": "Settings" },
+  "popup_placeholder":  { "message": "URL will appear here…" },
+  "popup_shortening":   { "message": "Shortening…" },
+  "popup_error_empty":  { "message": "No URL to shorten." },
+  "popup_error_failed": { "message": "Could not shorten URL. Try again." },
+  "popup_not_setup":    { "message": "Do you already have a fearly.eu account?" },
+  "popup_go_settings":  { "message": "Open Settings" },
+  "popup_anonymous":    { "message": "Anonymous" },
+
+  "settings_title":          { "message": "fearly.eu Settings" },
+  "settings_account":        { "message": "Account" },
+  "settings_account_type":   { "message": "Account type" },
+  "settings_account_number": { "message": "Account number" },
+  "settings_api_key":        { "message": "API key" },
+  "settings_api_key_show":   { "message": "Show" },
+  "settings_api_key_hide":   { "message": "Hide" },
+  "settings_api_key_copy":   { "message": "Copy key" },
+  "settings_api_key_copied": { "message": "Copied!" },
+  "settings_logout":         { "message": "Disconnect" },
+  "settings_logout_confirm": { "message": "This will remove your credentials from this browser. Continue?" },
+  "settings_logout_warning": { "message": "If you disconnect without saving your account number, you will permanently lose access to your account." },
+  "settings_logout_cancel":  { "message": "Cancel" },
+  "settings_dashboard":      { "message": "Open fearly dashboard" },
+  "settings_connect_other":    { "message": "Connect a different account" },
+
+"footer_privacy":  { "message": "Privacy policy" },
+  "footer_terms":    { "message": "Terms of service" },
+  "footer_bug":      { "message": "Report a bug" },
+  "footer_review":   { "message": "Write a review" },
+
+  "settings_no_options": { "message": "More options coming soon." },
+
+  "wizard_step1_title":     { "message": "Welcome to fearly.eu" },
+  "wizard_step1_subtitle":  { "message": "Do you already have a fearly.eu account?" },
+  "wizard_btn_yes":         { "message": "Yes" },
+  "wizard_btn_no":          { "message": "No" },
+
+  "wizard_step2_title":     { "message": "Sign in" },
+  "wizard_tab_code":        { "message": "Account number" },
+  "wizard_tab_email":       { "message": "Email & password" },
+  "wizard_code_placeholder":  { "message": "Your account number" },
+  "wizard_email_placeholder": { "message": "Email address" },
+  "wizard_pass_placeholder":  { "message": "Password" },
+  "wizard_btn_signin":      { "message": "Sign in" },
+  "wizard_signing_in":      { "message": "Signing in…" },
+
+  "wizard_step3_title":     { "message": "API key" },
+  "wizard_step3_subtitle":  { "message": "Do you already have a fearly.eu API key?" },
+  "wizard_btn_have_key":    { "message": "Yes, I have a key" },
+  "wizard_btn_create_key":  { "message": "No, generate one" },
+
+  "wizard_step4a_title":    { "message": "Enter your API key" },
+  "wizard_key_placeholder": { "message": "fearly_…" },
+  "wizard_btn_save_key":    { "message": "Save & continue" },
+
+  "wizard_step4b_title":    { "message": "Generating API key…" },
+
+  "wizard_done_title":      { "message": "All set!" },
+  "wizard_done_subtitle":   { "message": "Your account is connected. You can now shorten URLs." },
+  "wizard_btn_start":       { "message": "Start shortening" },
+
+  "wizard_step_new_title":    { "message": "Creating your account…" },
+  "wizard_new_done_title":    { "message": "Account created!" },
+  "wizard_new_done_subtitle": { "message": "Save your account number — you need it to sign in on other devices." },
+  "wizard_save_number":       { "message": "Save account number" },
+  "wizard_save_key":          { "message": "Save API key" },
+
+  "error_network":       { "message": "Network error. Check your internet connection." },
+  "error_invalid_key":   { "message": "API key not recognised. Check and try again." },
+  "error_invalid_creds": { "message": "Account not found or wrong password." },
+  "error_rate_limit":    { "message": "Too many attempts. Try again later." },
+  "error_generic":       { "message": "Something went wrong. Please try again." },
+
+  "label_extension": { "message": "Chrome Extension" }
+}

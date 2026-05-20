@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "fearly.eu — Zkracovač URL"
+  },
+  "ext_description": {
+    "message": "Okamžitě zkraťte URL aktivní karty pomocí fearly.eu"
+  },
+  "popup_shorten": {
+    "message": "Zkrátit"
+  },
+  "popup_copy": {
+    "message": "Kopírovat"
+  },
+  "popup_copied": {
+    "message": "Zkopírováno!"
+  },
+  "popup_open": {
+    "message": "Otevřít"
+  },
+  "popup_settings": {
+    "message": "Nastavení"
+  },
+  "popup_placeholder": {
+    "message": "Zde se zobrazí odkaz…"
+  },
+  "popup_shortening": {
+    "message": "Zkracování…"
+  },
+  "popup_error_empty": {
+    "message": "Žádná URL ke zkrácení."
+  },
+  "popup_error_failed": {
+    "message": "Nepodařilo se zkrátit URL. Zkuste to znovu."
+  },
+  "popup_not_setup": {
+    "message": "Nejprve nastavte svůj účet."
+  },
+  "popup_go_settings": {
+    "message": "Otevřít nastavení"
+  },
+  "popup_anonymous": {
+    "message": "Anonymní"
+  },
+  "settings_title": {
+    "message": "Nastavení fearly.eu"
+  },
+  "settings_account": {
+    "message": "Účet"
+  },
+  "settings_account_type": {
+    "message": "Typ účtu"
+  },
+  "settings_account_number": {
+    "message": "Číslo účtu"
+  },
+  "settings_api_key": {
+    "message": "API klíč"
+  },
+  "settings_api_key_show": {
+    "message": "Zobrazit"
+  },
+  "settings_api_key_hide": {
+    "message": "Skrýt"
+  },
+  "settings_api_key_copy": {
+    "message": "Kopírovat klíč"
+  },
+  "settings_api_key_copied": {
+    "message": "Zkopírováno!"
+  },
+  "settings_logout": {
+    "message": "Odpojit"
+  },
+  "settings_logout_confirm": {
+    "message": "Tím se odstraní vaše přihlašovací údaje z tohoto prohlížeče. Pokračovat?"
+  },
+  "settings_logout_warning": { "message": "Pokud se odpojíte bez uložení čísla účtu, ztratíte trvalý přístup ke svému účtu." },
+  "settings_logout_cancel":  { "message": "Zrušit" },
+  "settings_dashboard": {
+    "message": "Otevřít fearly dashboard"
+  },
+  "settings_connect_other": {
+    "message": "Připojit jiný účet"
+  },
+  "wizard_step1_title": {
+    "message": "Vítejte na fearly.eu"
+  },
+  "wizard_step1_subtitle": {
+    "message": "Máte již účet na fearly.eu?"
+  },
+  "wizard_btn_yes": {
+    "message": "Ano"
+  },
+  "wizard_btn_no": {
+    "message": "Ne"
+  },
+  "wizard_step2_title": {
+    "message": "Přihlásit se"
+  },
+  "wizard_tab_code": {
+    "message": "Číslo účtu"
+  },
+  "wizard_tab_email": {
+    "message": "E-mail a heslo"
+  },
+  "wizard_code_placeholder": {
+    "message": "Vaše 23znakové číslo účtu"
+  },
+  "wizard_email_placeholder": {
+    "message": "E-mailová adresa"
+  },
+  "wizard_pass_placeholder": {
+    "message": "Heslo"
+  },
+  "wizard_btn_signin": {
+    "message": "Přihlásit se"
+  },
+  "wizard_signing_in": {
+    "message": "Přihlašování…"
+  },
+  "wizard_step3_title": {
+    "message": "API klíč"
+  },
+  "wizard_step3_subtitle": {
+    "message": "Máte již API klíč fearly.eu?"
+  },
+  "wizard_btn_have_key": {
+    "message": "Ano, mám klíč"
+  },
+  "wizard_btn_create_key": {
+    "message": "Ne, vygenerovat klíč"
+  },
+  "wizard_step4a_title": {
+    "message": "Zadejte API klíč"
+  },
+  "wizard_key_placeholder": {
+    "message": "fearly_…"
+  },
+  "wizard_btn_save_key": {
+    "message": "Uložit a pokračovat"
+  },
+  "wizard_step4b_title": {
+    "message": "Generování API klíče…"
+  },
+  "wizard_done_title": {
+    "message": "Vše připraveno!"
+  },
+  "wizard_done_subtitle": {
+    "message": "Váš účet je připojen. Nyní můžete zkracovat URL."
+  },
+  "wizard_btn_start": {
+    "message": "Začít"
+  },
+  "wizard_step_new_title": {
+    "message": "Vytváření účtu…"
+  },
+  "wizard_new_done_title": {
+    "message": "Účet byl vytvořen!"
+  },
+  "wizard_new_done_subtitle": {
+    "message": "Uložte si číslo účtu — budete ho potřebovat pro přihlášení na jiných zařízeních."
+  },
+  "wizard_save_number": {
+    "message": "Uložit číslo účtu"
+  },
+  "wizard_save_key": {
+    "message": "Uložit API klíč"
+  },
+  "error_network": {
+    "message": "Chyba sítě. Zkontrolujte připojení k internetu."
+  },
+  "error_invalid_key": {
+    "message": "API klíč nebyl rozpoznán. Zkontrolujte ho a zkuste znovu."
+  },
+  "error_invalid_creds": {
+    "message": "Účet nenalezen nebo nesprávné heslo."
+  },
+  "error_rate_limit": {
+    "message": "Příliš mnoho pokusů. Zkuste to znovu později."
+  },
+  "error_generic": {
+    "message": "Něco se pokazilo. Zkuste to prosím znovu."
+  },
+  "label_extension": {
+    "message": "Rozšíření Chrome"
+  },
+  "footer_privacy": {
+    "message": "Zásady ochrany soukromí"
+  },
+  "footer_terms": {
+    "message": "Podmínky použití"
+  },
+  "footer_bug": {
+    "message": "Nahlásit chybu"
+  },
+  "footer_review": {
+    "message": "Napsat recenzi"
+  },
+  "settings_no_options": {
+    "message": "Další možnosti brzy."
+  }
+}

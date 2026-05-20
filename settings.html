@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fearly.eu — Instellingen</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      color: #e0e0e0;
+      background: #111128;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 60px;
+    }
+
+    /* ── Card ── */
+    .card {
+      width: 100%;
+      max-width: 800px;
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* ── Card header ── */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    .logo { height: 36px; width: auto; display: block; }
+
+    #lang-select {
+      background: #22223a; border: 1px solid #3a3a60;
+      color: #aaa; border-radius: 6px;
+      padding: 5px 8px; font-size: 12px;
+      cursor: pointer; outline: none;
+    }
+    #lang-select:focus { border-color: #7c6af7; }
+
+    /* ── Main tabs ── */
+    .main-tabs {
+      display: flex;
+      border-bottom: 1px solid #2a2a4a;
+      padding: 0 32px;
+      background: #16162a;
+    }
+    .main-tab {
+      background: none; border: none; cursor: pointer;
+      color: #888; font-size: 14px; font-weight: 500;
+      padding: 14px 20px 12px;
+      border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+      margin-bottom: -1px;
+    }
+    .main-tab:hover { color: #c4b5fd; }
+    .main-tab.active { color: #7c6af7; border-bottom-color: #7c6af7; font-weight: 600; }
+
+    /* ── Main panels ── */
+    .main-panel { display: none; padding: 36px 32px; }
+    .main-panel.active { display: block; }
+
+    /* ── Wizard steps ── */
+    .step { display: none; }
+    .step.active { display: block; }
+
+    .step-title    { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .step-subtitle { font-size: 14px; color: #aaa; margin-bottom: 28px; line-height: 1.5; }
+
+    /* ── Buttons ── */
+    .btn-stack { display: flex; flex-direction: column; gap: 10px; }
+
+    .btn {
+      display: block; width: 100%;
+      padding: 13px 16px; border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 600;
+      cursor: pointer; transition: opacity .15s, background .15s;
+      text-align: center;
+    }
+    .btn:disabled { opacity: .45; cursor: default; }
+    .btn-primary   { background: #7c6af7; color: #fff; }
+    .btn-secondary { background: #2e2e50; color: #e0e0e0; }
+    .btn-danger    { background: #450a0a; color: #fca5a5; border: 1px solid #7f1d1d; }
+    .btn-link      { background: none; color: #7c6af7; padding: 10px 0; font-size: 13px; }
+    .btn-primary:hover:not(:disabled)   { opacity: .88; }
+    .btn-secondary:hover:not(:disabled) { background: #3a3a60; }
+    .btn-danger:hover:not(:disabled)    { background: #6b0909; }
+    .btn-link:hover { opacity: .8; }
+
+    /* ── Inner tabs (code / email) ── */
+    .tabs { display: flex; border-radius: 8px; overflow: hidden; margin-bottom: 20px; background: #22223a; }
+    .tab  { flex: 1; padding: 10px; text-align: center; cursor: pointer; font-size: 13px; color: #666; transition: all .15s; }
+    .tab.active { background: #7c6af7; color: #fff; font-weight: 600; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Form fields ── */
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 12px; color: #888; margin-bottom: 6px; font-weight: 500; }
+    .field input {
+      width: 100%; padding: 11px 12px;
+      background: #22223a; border: 1px solid #3a3a60;
+      border-radius: 7px; color: #e0e0e0; font-size: 14px;
+      outline: none; transition: border-color .15s;
+    }
+    .field input:focus { border-color: #7c6af7; }
+
+    /* ── Messages ── */
+    .msg { font-size: 12px; margin-top: 12px; min-height: 18px; line-height: 1.5; }
+    .msg.error   { color: #f87171; }
+    .msg.success { color: #4ade80; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid #2a2a4a; margin: 24px 0; }
+
+    /* ── Account info ── */
+    .info-grid { display: grid; gap: 14px; margin-bottom: 4px; }
+    .info-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
+    .info-label { font-size: 12px; color: #888; padding-top: 2px; }
+    .info-value { font-size: 13px; font-weight: 600; word-break: break-all; text-align: right; }
+    .info-value.mono { font-family: monospace; font-size: 12px; color: #c4b5fd; }
+
+    .key-controls { display: flex; gap: 6px; justify-content: flex-end; margin-top: 6px; }
+    .mini-btn {
+      background: #2e2e50; border: none; border-radius: 5px;
+      color: #aaa; padding: 4px 10px; font-size: 11px;
+      cursor: pointer; white-space: nowrap; transition: background .15s;
+    }
+    .mini-btn:hover { background: #3a3a60; color: #e0e0e0; }
+
+    /* ── Done screen ── */
+    .done-icon { font-size: 48px; text-align: center; margin-bottom: 16px; }
+    .save-card {
+      background: #22223a; border-radius: 8px;
+      padding: 14px 16px; margin-bottom: 12px;
+    }
+    .save-card-header {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 8px;
+    }
+    .save-card-label { font-size: 11px; color: #888; font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
+    .save-card-copy  { background: none; border: none; color: #7c6af7; font-size: 12px; cursor: pointer; font-weight: 600; padding: 0; }
+    .save-card-value { font-family: monospace; font-size: 13px; color: #c4b5fd; word-break: break-all; line-height: 1.6; }
+
+    /* ── Spinner ── */
+    .spinner { text-align: center; padding: 32px 0; color: #888; font-size: 13px; }
+    .spinner::before { content: '…'; display: block; font-size: 32px; margin-bottom: 12px; color: #7c6af7; }
+
+    /* ── Subtle disconnect link ── */
+    .subtle-action {
+      text-align: center; margin-top: 24px;
+    }
+    .subtle-action button {
+      background: none; border: none; cursor: pointer;
+      color: #333; font-size: 11px;
+      transition: color .15s; padding: 4px;
+      text-decoration: underline; text-underline-offset: 3px;
+    }
+    .subtle-action button:hover { color: #666; }
+
+    /* ── Disconnect modal ── */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.7);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 100;
+    }
+    .modal-box {
+      background: #1a1a2e; border: 1px solid #3a3a60;
+      border-radius: 12px; padding: 28px 24px;
+      max-width: 360px; width: 90%;
+    }
+    .modal-icon  { font-size: 36px; text-align: center; margin-bottom: 12px; }
+    .modal-title { font-size: 17px; font-weight: 700; text-align: center; color: #fff; margin-bottom: 10px; }
+    .modal-body  { font-size: 13px; color: #aaa; text-align: center; line-height: 1.6; margin-bottom: 16px; }
+    .modal-actions { display: flex; gap: 8px; margin-top: 16px; }
+
+    /* ── Settings panel ── */
+    .settings-section { margin-bottom: 32px; }
+    .settings-section-title {
+      font-size: 11px; font-weight: 600; color: #555;
+      text-transform: uppercase; letter-spacing: .8px; margin-bottom: 12px;
+    }
+    .setting-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 16px; background: #22223a;
+      border-radius: 8px; margin-bottom: 8px;
+      gap: 16px;
+    }
+    .setting-label { font-size: 14px; font-weight: 500; color: #e0e0e0; }
+    .setting-desc  { font-size: 12px; color: #666; margin-top: 3px; line-height: 1.4; }
+
+    /* ── Toggle switch ── */
+    .toggle { position: relative; width: 40px; height: 22px; flex-shrink: 0; }
+    .toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+    .toggle-slider {
+      position: absolute; inset: 0; cursor: pointer;
+      background: #3a3a60; border-radius: 22px;
+      transition: background .2s;
+    }
+    .toggle-slider::before {
+      content: ''; position: absolute;
+      width: 16px; height: 16px; left: 3px; bottom: 3px;
+      background: #fff; border-radius: 50%;
+      transition: transform .2s;
+    }
+    .toggle input:checked + .toggle-slider { background: #7c6af7; }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(18px); }
+
+    /* ── Footer ── */
+    .page-footer {
+      margin-top: 20px;
+      display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;
+      font-size: 12px;
+    }
+    .page-footer a {
+      display: inline-flex; align-items: center; gap: 4px;
+      color: #444; text-decoration: none; transition: color .15s;
+    }
+    .page-footer a:hover { color: #7c6af7; }
+    .ext-icon {
+      width: 11px; height: 11px; flex-shrink: 0;
+      stroke: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Inline SVG symbol for external links -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+  </symbol>
+</svg>
+
+<div class="card">
+
+  <!-- ── Header ── -->
+  <div class="card-header">
+    <img class="logo" src="icons/logo.svg" alt="fearly.eu">
+    <select id="lang-select"></select>
+  </div>
+
+  <!-- ── Main tabs ── -->
+  <div class="main-tabs">
+    <button class="main-tab active" data-panel="panel-account">Account</button>
+    <button class="main-tab"        data-panel="panel-settings">Instellingen</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       Account panel
+  ══════════════════════════════════════════════════════ -->
+  <div class="main-panel active" id="panel-account">
+
+    <!-- Step 1: have account? -->
+    <div class="step wizard-step" id="step-1">
+      <div class="step-title"    id="s1-title"></div>
+      <div class="step-subtitle" id="s1-subtitle"></div>
+      <div class="btn-stack">
+        <button class="btn btn-primary"   id="btn-has-account"></button>
+        <button class="btn btn-secondary" id="btn-no-account"></button>
+      </div>
+    </div>
+
+    <!-- Step 2: sign in -->
+    <div class="step wizard-step" id="step-2">
+      <div class="step-title" id="s2-title"></div>
+      <br>
+      <div class="tabs">
+        <div class="tab active" data-tab="tab-code"  id="tab-code-btn"></div>
+        <div class="tab"        data-tab="tab-email" id="tab-email-btn"></div>
+      </div>
+
+      <div class="tab-panel active" id="tab-code">
+        <div class="field">
+          <label id="lbl-code"></label>
+          <input type="text" id="input-code" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-email">
+        <div class="field">
+          <label id="lbl-email"></label>
+          <input type="email" id="input-email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label id="lbl-pass"></label>
+          <input type="password" id="input-pass" autocomplete="current-password">
+        </div>
+      </div>
+
+      <div class="msg error" id="s2-error"></div>
+      <br>
+      <div class="btn-stack">
+        <button class="btn btn-primary" id="btn-signin"></button>
+        <button class="btn btn-link"    id="btn-back-1">← Back</button>
+      </div>
+    </div>
+
+    <!-- Step 3: have API key? -->
+    <div class="step wizard-step" id="step-3">
+      <div class="step-title"    id="s3-title"></div>
+      <div class="step-subtitle" id="s3-subtitle"></div>
+      <div class="btn-stack">
+        <button class="btn btn-primary"   id="btn-have-key"></button>
+        <button class="btn btn-secondary" id="btn-create-key"></button>
+      </div>
+    </div>
+
+    <!-- Step 4a: enter key -->
+    <div class="step wizard-step" id="step-4a">
+      <div class="step-title" id="s4a-title"></div>
+      <br>
+      <div class="field">
+        <label>API key</label>
+        <input type="text" id="input-apikey" autocomplete="off" spellcheck="false" placeholder="fearly_…">
+      </div>
+      <div class="msg error" id="s4a-error"></div>
+      <br>
+      <div class="btn-stack">
+        <button class="btn btn-primary" id="btn-save-key"></button>
+        <button class="btn btn-link"    id="btn-back-3">← Back</button>
+      </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div class="step wizard-step" id="step-loading">
+      <div class="spinner" id="loading-label"></div>
+    </div>
+
+    <!-- Done -->
+    <div class="step wizard-step" id="step-done">
+      <div class="done-icon">✅</div>
+      <div class="step-title"    id="sdone-title"    style="text-align:center"></div>
+      <div class="step-subtitle" id="sdone-subtitle" style="text-align:center;margin-bottom:24px"></div>
+
+      <div id="done-save-number" style="display:none">
+        <div class="save-card">
+          <div class="save-card-header">
+            <span class="save-card-label" id="lbl-save-number"></span>
+            <button class="save-card-copy" id="btn-copy-number">⧉ Copy</button>
+          </div>
+          <div class="save-card-value" id="val-save-number"></div>
+        </div>
+      </div>
+
+      <div id="done-save-key" style="display:none">
+        <div class="save-card">
+          <div class="save-card-header">
+            <span class="save-card-label" id="lbl-save-key"></span>
+            <button class="save-card-copy" id="btn-copy-key">⧉ Copy</button>
+          </div>
+          <div class="save-card-value" id="val-save-key"></div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="btn-start" style="margin-top:8px"></button>
+    </div>
+
+    <!-- Account view (logged in) -->
+    <div class="step" id="step-account">
+      <div class="step-title" id="s-account-title"></div>
+      <br>
+      <div class="info-grid">
+        <div class="info-row">
+          <span class="info-label" id="lbl-acc-type"></span>
+          <span class="info-value" id="val-acc-type"></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label" id="lbl-acc-number"></span>
+          <span class="info-value mono" id="val-acc-number"></span>
+        </div>
+        <div>
+          <div class="info-row">
+            <span class="info-label" id="lbl-acc-key"></span>
+            <span class="info-value mono" id="val-acc-key"></span>
+          </div>
+          <div class="key-controls">
+            <button class="mini-btn" id="btn-toggle-key"></button>
+            <button class="mini-btn" id="btn-copy-acc-key"></button>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="btn-stack">
+        <button class="btn btn-secondary" id="btn-open-dashboard"></button>
+      </div>
+
+      <div class="msg error" id="s-account-error"></div>
+
+      <div class="subtle-action">
+        <button id="btn-disconnect"></button>
+      </div>
+    </div>
+
+  </div><!-- /panel-account -->
+
+  <!-- ══════════════════════════════════════════════════════
+       Settings panel
+  ══════════════════════════════════════════════════════ -->
+  <div class="main-panel" id="panel-settings">
+    <p id="settings-placeholder" style="color:#555;font-size:13px;"></p>
+  </div><!-- /panel-settings -->
+
+</div><!-- .card -->
+
+<!-- ── Disconnect confirmation modal ── -->
+<div class="modal-overlay" id="modal-disconnect" style="display:none">
+  <div class="modal-box">
+    <div class="modal-icon">⚠️</div>
+    <div class="modal-title" id="modal-disc-title"></div>
+    <div class="modal-body"  id="modal-disc-body"></div>
+    <div class="save-card">
+      <div class="save-card-header">
+        <span class="save-card-label" id="lbl-modal-number"></span>
+        <button class="save-card-copy" id="btn-modal-copy-number">⧉ Copy</button>
+      </div>
+      <div class="save-card-value" id="val-modal-number"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="btn-modal-cancel"></button>
+      <button class="btn btn-danger"    id="btn-modal-confirm"></button>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <a href="https://www.fearly.eu/pages/privacy.html" target="_blank" id="footer-privacy">
+    <svg class="ext-icon"><use href="#icon-ext"/></svg>
+  </a>
+  <a href="https://www.fearly.eu/pages/terms.html" target="_blank" id="footer-terms">
+    <svg class="ext-icon"><use href="#icon-ext"/></svg>
+  </a>
+  <a href="#" target="_blank" id="footer-bug">
+    <svg class="ext-icon"><use href="#icon-ext"/></svg>
+  </a>
+  <a href="#" target="_blank" id="footer-review">
+    <svg class="ext-icon"><use href="#icon-ext"/></svg>
+  </a>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

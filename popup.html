@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fearly.eu</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      color: #e0e0e0;
+      background: #1a1a2e;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px 10px;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    .logo { font-size: 15px; font-weight: 700; color: #7c6af7; letter-spacing: -.3px; }
+    .account-badge {
+      font-size: 11px; color: #888;
+      background: #22223a; padding: 2px 8px; border-radius: 10px;
+      max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .settings-btn {
+      background: none; border: none; cursor: pointer;
+      color: #888; font-size: 16px; padding: 2px 6px;
+      transition: color .15s; flex-shrink: 0;
+    }
+    .settings-btn:hover { color: #7c6af7; }
+
+    main { padding: 14px; }
+
+    .url-display {
+      font-size: 12px; color: #aaa;
+      background: #22223a; border-radius: 6px;
+      padding: 7px 10px; margin-bottom: 10px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      min-height: 30px; line-height: 16px;
+    }
+    .url-display.invalid { color: #f87171; }
+
+    button {
+      flex: 1; padding: 9px 0;
+      border: none; border-radius: 7px;
+      font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: opacity .15s, transform .1s;
+    }
+    button:active { transform: scale(.97); }
+    button:disabled { opacity: .45; cursor: default; }
+
+    .btn-row { display: flex; gap: 8px; }
+    #btn-shorten { background: #7c6af7; color: #fff; }
+    #btn-shorten:hover:not(:disabled) { opacity: .88; }
+
+    .result-box {
+      margin-top: 12px; background: #22223a;
+      border-radius: 8px; padding: 10px 12px; display: none;
+    }
+    .result-box.visible { display: block; }
+
+    .short-url {
+      font-size: 15px; font-weight: 700; color: #7c6af7;
+      word-break: break-all; margin-bottom: 10px;
+    }
+    .result-actions { display: flex; gap: 8px; }
+    #btn-copy, #btn-open { background: #2e2e50; color: #e0e0e0; }
+    #btn-copy:hover, #btn-open:hover { background: #3a3a60; }
+
+    .msg {
+      margin-top: 10px; font-size: 12px;
+      text-align: center; display: none;
+    }
+    .msg.visible { display: block; }
+    .msg.error   { color: #f87171; }
+    .msg.info    { color: #aaa; }
+
+    /* not-setup screen */
+    .not-setup { text-align: center; padding: 20px 0 10px; }
+    .not-setup p { color: #aaa; margin-bottom: 14px; font-size: 13px; line-height: 1.5; }
+    #btn-go-settings {
+      background: #7c6af7; color: #fff;
+      max-width: 200px; margin: 0 auto; display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">fearly.eu</span>
+  <span class="account-badge" id="account-badge"></span>
+  <button class="settings-btn" id="btn-settings">⚙</button>
+</header>
+
+<main>
+  <div class="not-setup" id="not-setup" style="display:none">
+    <p id="txt-not-setup"></p>
+    <div class="btn-row">
+      <button id="btn-has-account"></button>
+      <button id="btn-no-account" style="background:#2e2e50;color:#e0e0e0;"></button>
+    </div>
+  </div>
+
+  <div id="shortener-ui" style="display:none">
+    <div class="url-display" id="current-url"></div>
+    <div class="btn-row">
+      <button id="btn-shorten"></button>
+    </div>
+    <div class="result-box" id="result-box">
+      <div class="short-url" id="short-url"></div>
+      <div class="result-actions">
+        <button id="btn-copy"></button>
+        <button id="btn-open"></button>
+      </div>
+    </div>
+    <div class="msg error" id="error-msg"></div>
+    <div class="msg info"  id="info-msg"></div>
+  </div>
+</main>
+
+<script src="i18n.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

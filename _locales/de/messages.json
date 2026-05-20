@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "fearly.eu — URL-Kürzer"
+  },
+  "ext_description": {
+    "message": "Kürzt die URL des aktiven Tabs sofort mit fearly.eu"
+  },
+  "popup_shorten": {
+    "message": "Kürzen"
+  },
+  "popup_copy": {
+    "message": "Kopieren"
+  },
+  "popup_copied": {
+    "message": "Kopiert!"
+  },
+  "popup_open": {
+    "message": "Öffnen"
+  },
+  "popup_settings": {
+    "message": "Einstellungen"
+  },
+  "popup_placeholder": {
+    "message": "URL erscheint hier…"
+  },
+  "popup_shortening": {
+    "message": "Wird gekürzt…"
+  },
+  "popup_error_empty": {
+    "message": "Keine URL zum Kürzen."
+  },
+  "popup_error_failed": {
+    "message": "URL konnte nicht gekürzt werden. Bitte erneut versuchen."
+  },
+  "popup_not_setup": {
+    "message": "Bitte zuerst Konto einrichten."
+  },
+  "popup_go_settings": {
+    "message": "Einstellungen öffnen"
+  },
+  "popup_anonymous": {
+    "message": "Anonym"
+  },
+  "settings_title": {
+    "message": "fearly.eu Einstellungen"
+  },
+  "settings_account": {
+    "message": "Konto"
+  },
+  "settings_account_type": {
+    "message": "Kontotyp"
+  },
+  "settings_account_number": {
+    "message": "Kontonummer"
+  },
+  "settings_api_key": {
+    "message": "API-Schlüssel"
+  },
+  "settings_api_key_show": {
+    "message": "Anzeigen"
+  },
+  "settings_api_key_hide": {
+    "message": "Ausblenden"
+  },
+  "settings_api_key_copy": {
+    "message": "Schlüssel kopieren"
+  },
+  "settings_api_key_copied": {
+    "message": "Kopiert!"
+  },
+  "settings_logout": {
+    "message": "Verbindung trennen"
+  },
+  "settings_logout_confirm": {
+    "message": "Dadurch werden Ihre Zugangsdaten aus diesem Browser entfernt. Fortfahren?"
+  },
+  "settings_logout_warning": { "message": "Wenn du dich trennst, ohne deine Kontonummer zu speichern, verlierst du dauerhaft den Zugang zu deinem Konto." },
+  "settings_logout_cancel":  { "message": "Abbrechen" },
+  "settings_dashboard": {
+    "message": "fearly-Dashboard öffnen"
+  },
+  "settings_connect_other": {
+    "message": "Anderen Account verbinden"
+  },
+  "wizard_step1_title": {
+    "message": "Willkommen bei fearly.eu"
+  },
+  "wizard_step1_subtitle": {
+    "message": "Haben Sie bereits ein fearly.eu-Konto?"
+  },
+  "wizard_btn_yes": {
+    "message": "Ja"
+  },
+  "wizard_btn_no": {
+    "message": "Nein"
+  },
+  "wizard_step2_title": {
+    "message": "Anmelden"
+  },
+  "wizard_tab_code": {
+    "message": "Kontonummer"
+  },
+  "wizard_tab_email": {
+    "message": "E-Mail & Passwort"
+  },
+  "wizard_code_placeholder": {
+    "message": "Ihre 23-stellige Kontonummer"
+  },
+  "wizard_email_placeholder": {
+    "message": "E-Mail-Adresse"
+  },
+  "wizard_pass_placeholder": {
+    "message": "Passwort"
+  },
+  "wizard_btn_signin": {
+    "message": "Anmelden"
+  },
+  "wizard_signing_in": {
+    "message": "Anmeldung läuft…"
+  },
+  "wizard_step3_title": {
+    "message": "API-Schlüssel"
+  },
+  "wizard_step3_subtitle": {
+    "message": "Haben Sie bereits einen fearly.eu API-Schlüssel?"
+  },
+  "wizard_btn_have_key": {
+    "message": "Ja, ich habe einen"
+  },
+  "wizard_btn_create_key": {
+    "message": "Nein, einen erstellen"
+  },
+  "wizard_step4a_title": {
+    "message": "API-Schlüssel eingeben"
+  },
+  "wizard_key_placeholder": {
+    "message": "fearly_…"
+  },
+  "wizard_btn_save_key": {
+    "message": "Speichern & weiter"
+  },
+  "wizard_step4b_title": {
+    "message": "API-Schlüssel wird generiert…"
+  },
+  "wizard_done_title": {
+    "message": "Alles bereit!"
+  },
+  "wizard_done_subtitle": {
+    "message": "Ihr Konto ist verbunden. Sie können jetzt URLs kürzen."
+  },
+  "wizard_btn_start": {
+    "message": "Loslegen"
+  },
+  "wizard_step_new_title": {
+    "message": "Konto wird erstellt…"
+  },
+  "wizard_new_done_title": {
+    "message": "Konto erstellt!"
+  },
+  "wizard_new_done_subtitle": {
+    "message": "Notieren Sie Ihre Kontonummer — Sie benötigen sie für die Anmeldung auf anderen Geräten."
+  },
+  "wizard_save_number": {
+    "message": "Kontonummer speichern"
+  },
+  "wizard_save_key": {
+    "message": "API-Schlüssel speichern"
+  },
+  "error_network": {
+    "message": "Netzwerkfehler. Bitte Internetverbindung prüfen."
+  },
+  "error_invalid_key": {
+    "message": "API-Schlüssel nicht erkannt. Bitte prüfen und erneut versuchen."
+  },
+  "error_invalid_creds": {
+    "message": "Konto nicht gefunden oder falsches Passwort."
+  },
+  "error_rate_limit": {
+    "message": "Zu viele Versuche. Bitte später erneut versuchen."
+  },
+  "error_generic": {
+    "message": "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+  },
+  "label_extension": {
+    "message": "Chrome-Erweiterung"
+  },
+  "footer_privacy": {
+    "message": "Datenschutzerklärung"
+  },
+  "footer_terms": {
+    "message": "Nutzungsbedingungen"
+  },
+  "footer_bug": {
+    "message": "Fehler melden"
+  },
+  "footer_review": {
+    "message": "Bewertung schreiben"
+  },
+  "settings_no_options": {
+    "message": "Weitere Optionen folgen bald."
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "fearly.eu — Skraćivač URL-ova"
+  },
+  "ext_description": {
+    "message": "Odmah skratite URL aktivne kartice pomoću fearly.eu"
+  },
+  "popup_shorten": {
+    "message": "Skrati"
+  },
+  "popup_copy": {
+    "message": "Kopiraj"
+  },
+  "popup_copied": {
+    "message": "Kopirano!"
+  },
+  "popup_open": {
+    "message": "Otvori"
+  },
+  "popup_settings": {
+    "message": "Postavke"
+  },
+  "popup_placeholder": {
+    "message": "Ovdje će se prikazati link…"
+  },
+  "popup_shortening": {
+    "message": "Skraćivanje…"
+  },
+  "popup_error_empty": {
+    "message": "Nema URL-a za skraćivanje."
+  },
+  "popup_error_failed": {
+    "message": "Nije moguće skratiti URL. Pokušajte ponovo."
+  },
+  "popup_not_setup": {
+    "message": "Najprije postavite račun."
+  },
+  "popup_go_settings": {
+    "message": "Otvori postavke"
+  },
+  "popup_anonymous": {
+    "message": "Anonimno"
+  },
+  "settings_title": {
+    "message": "Postavke fearly.eu"
+  },
+  "settings_account": {
+    "message": "Račun"
+  },
+  "settings_account_type": {
+    "message": "Vrsta računa"
+  },
+  "settings_account_number": {
+    "message": "Broj računa"
+  },
+  "settings_api_key": {
+    "message": "API ključ"
+  },
+  "settings_api_key_show": {
+    "message": "Prikaži"
+  },
+  "settings_api_key_hide": {
+    "message": "Sakrij"
+  },
+  "settings_api_key_copy": {
+    "message": "Kopiraj ključ"
+  },
+  "settings_api_key_copied": {
+    "message": "Kopirano!"
+  },
+  "settings_logout": {
+    "message": "Odspoji"
+  },
+  "settings_logout_confirm": {
+    "message": "Time će se ukloniti vaši podaci iz ovog preglednika. Nastaviti?"
+  },
+  "settings_logout_warning": { "message": "Ako se odspojite bez pohrane broja računa, trajno ćete izgubiti pristup svom računu." },
+  "settings_logout_cancel":  { "message": "Odustani" },
+  "settings_dashboard": {
+    "message": "Otvori fearly nadzornu ploču"
+  },
+  "settings_connect_other": {
+    "message": "Poveži drugi račun"
+  },
+  "wizard_step1_title": {
+    "message": "Dobrodošli na fearly.eu"
+  },
+  "wizard_step1_subtitle": {
+    "message": "Imate li već račun na fearly.eu?"
+  },
+  "wizard_btn_yes": {
+    "message": "Da"
+  },
+  "wizard_btn_no": {
+    "message": "Ne"
+  },
+  "wizard_step2_title": {
+    "message": "Prijava"
+  },
+  "wizard_tab_code": {
+    "message": "Broj računa"
+  },
+  "wizard_tab_email": {
+    "message": "E-mail i lozinka"
+  },
+  "wizard_code_placeholder": {
+    "message": "Vaš 23-znamenkasti broj računa"
+  },
+  "wizard_email_placeholder": {
+    "message": "E-mail adresa"
+  },
+  "wizard_pass_placeholder": {
+    "message": "Lozinka"
+  },
+  "wizard_btn_signin": {
+    "message": "Prijavi se"
+  },
+  "wizard_signing_in": {
+    "message": "Prijava u tijeku…"
+  },
+  "wizard_step3_title": {
+    "message": "API ključ"
+  },
+  "wizard_step3_subtitle": {
+    "message": "Imate li već fearly.eu API ključ?"
+  },
+  "wizard_btn_have_key": {
+    "message": "Da, imam ključ"
+  },
+  "wizard_btn_create_key": {
+    "message": "Ne, generiraj ključ"
+  },
+  "wizard_step4a_title": {
+    "message": "Unesite API ključ"
+  },
+  "wizard_key_placeholder": {
+    "message": "fearly_…"
+  },
+  "wizard_btn_save_key": {
+    "message": "Spremi i nastavi"
+  },
+  "wizard_step4b_title": {
+    "message": "Generiranje API ključa…"
+  },
+  "wizard_done_title": {
+    "message": "Sve je spremno!"
+  },
+  "wizard_done_subtitle": {
+    "message": "Vaš račun je spojen. Sada možete skraćivati URL-ove."
+  },
+  "wizard_btn_start": {
+    "message": "Počnimo"
+  },
+  "wizard_step_new_title": {
+    "message": "Stvaranje računa…"
+  },
+  "wizard_new_done_title": {
+    "message": "Račun je stvoren!"
+  },
+  "wizard_new_done_subtitle": {
+    "message": "Pohranite broj računa — trebat će vam za prijavu na drugim uređajima."
+  },
+  "wizard_save_number": {
+    "message": "Pohrani broj računa"
+  },
+  "wizard_save_key": {
+    "message": "Pohrani API ključ"
+  },
+  "error_network": {
+    "message": "Greška mreže. Provjerite internetsku vezu."
+  },
+  "error_invalid_key": {
+    "message": "API ključ nije prepoznat. Provjerite i pokušajte ponovo."
+  },
+  "error_invalid_creds": {
+    "message": "Račun nije pronađen ili je lozinka pogrešna."
+  },
+  "error_rate_limit": {
+    "message": "Previše pokušaja. Pokušajte ponovo kasnije."
+  },
+  "error_generic": {
+    "message": "Nešto je pošlo po krivu. Molimo pokušajte ponovo."
+  },
+  "label_extension": {
+    "message": "Chrome proširenje"
+  },
+  "footer_privacy": {
+    "message": "Pravila privatnosti"
+  },
+  "footer_terms": {
+    "message": "Uvjeti korištenja"
+  },
+  "footer_bug": {
+    "message": "Prijavi grešku"
+  },
+  "footer_review": {
+    "message": "Napiši recenziju"
+  },
+  "settings_no_options": {
+    "message": "Više opcija uskoro."
+  }
+}
