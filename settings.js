@@ -88,6 +88,9 @@ function applyStaticI18n() {
   setText('lbl-save-number', 'wizard_save_number');
   setText('lbl-save-key',    'wizard_save_key');
 
+  setText('tab-main-account',    'settings_account');
+  setText('tab-main-settings',   'popup_settings');
+
   setText('s-account-title',    'settings_account');
   setText('lbl-acc-type',       'settings_account_type');
   setText('lbl-acc-number',     'settings_account_number');
