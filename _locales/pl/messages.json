@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "fearly.eu — Skracacz linków"
+    "message": "Free and anonymous URL shortener  - Fearly.eu"
   },
   "ext_description": {
-    "message": "Skracaj adresy URL aktywnej karty błyskawicznie z fearly.eu"
+    "message": "Skróć dowolny URL natychmiast z fearly.eu — bezpłatnie, anonimowo i z poszanowaniem prywatności."
   },
   "popup_shorten": {
     "message": "Skróć"
@@ -104,7 +104,7 @@
     "message": "E-mail i hasło"
   },
   "wizard_code_placeholder": {
-    "message": "Twój 23-znakowy numer konta"
+    "message": "Twój numer konta"
   },
   "wizard_email_placeholder": {
     "message": "Adres e-mail"

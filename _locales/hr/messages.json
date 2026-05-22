@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "fearly.eu — Skraćivač URL-ova"
+    "message": "Free and anonymous URL shortener  - Fearly.eu"
   },
   "ext_description": {
-    "message": "Odmah skratite URL aktivne kartice pomoću fearly.eu"
+    "message": "Skratite bilo koji URL odmah s fearly.eu — besplatno, anonimno i privatno."
   },
   "popup_shorten": {
     "message": "Skrati"
@@ -104,7 +104,7 @@
     "message": "E-mail i lozinka"
   },
   "wizard_code_placeholder": {
-    "message": "Vaš 23-znamenkasti broj računa"
+    "message": "Vaš broj računa"
   },
   "wizard_email_placeholder": {
     "message": "E-mail adresa"

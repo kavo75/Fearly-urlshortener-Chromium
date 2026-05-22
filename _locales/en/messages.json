@@ -1,6 +1,6 @@
 {
-  "ext_name":        { "message": "fearly.eu — URL Shortener" },
-  "ext_description": { "message": "Shorten the current tab's URL instantly with fearly.eu" },
+  "ext_name":        { "message": "Free and anonymous URL shortener  - Fearly.eu" },
+  "ext_description": { "message": "Shorten any URL instantly with fearly.eu — free, anonymous, and privacy-friendly." },
 
   "popup_shorten":      { "message": "Shorten" },
   "popup_copy":         { "message": "Copy" },

@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "fearly.eu — URL-rövidítő"
+    "message": "Free and anonymous URL shortener  - Fearly.eu"
   },
   "ext_description": {
-    "message": "Rövidítsd meg az aktív lap URL-jét azonnal a fearly.eu segítségével"
+    "message": "Rövidítsen bármilyen URL-t azonnal a fearly.eu segítségével — ingyenes, névtelen és adatvédelmi."
   },
   "popup_shorten": {
     "message": "Rövidítés"
@@ -104,7 +104,7 @@
     "message": "E-mail és jelszó"
   },
   "wizard_code_placeholder": {
-    "message": "A 23 karakteres fiókszámod"
+    "message": "A fiókszámod"
   },
   "wizard_email_placeholder": {
     "message": "E-mail cím"

@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "fearly.eu — Accorciatore di URL"
+    "message": "Free and anonymous URL shortener  - Fearly.eu"
   },
   "ext_description": {
-    "message": "Accorcia immediatamente l'URL della scheda attiva con fearly.eu"
+    "message": "Abbrevia qualsiasi URL istantaneamente con fearly.eu — gratuito, anonimo e rispettoso della privacy."
   },
   "popup_shorten": {
     "message": "Accorcia"
@@ -104,7 +104,7 @@
     "message": "Email e password"
   },
   "wizard_code_placeholder": {
-    "message": "Il tuo numero account a 23 caratteri"
+    "message": "Il tuo numero account"
   },
   "wizard_email_placeholder": {
     "message": "Indirizzo email"

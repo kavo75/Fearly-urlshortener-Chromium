@@ -1,6 +1,6 @@
 {
-  "ext_name":        { "message": "fearly.eu — URL Verkorten" },
-  "ext_description": { "message": "Verkort de URL van het huidige tabblad direct met fearly.eu" },
+  "ext_name":        { "message": "Free and anonymous URL shortener  - Fearly.eu" },
+  "ext_description": { "message": "Verkort elke URL direct met fearly.eu — gratis, anoniem en privacyvriendelijk." },
 
   "popup_shorten":      { "message": "Verkort" },
   "popup_copy":         { "message": "Kopieer" },
@@ -46,7 +46,7 @@
   "wizard_step2_title":     { "message": "Inloggen" },
   "wizard_tab_code":        { "message": "Accountnummer" },
   "wizard_tab_email":       { "message": "E-mail & wachtwoord" },
-  "wizard_code_placeholder":  { "message": "Jouw 23-cijferig accountnummer" },
+  "wizard_code_placeholder":  { "message": "Jouw accountnummer" },
   "wizard_email_placeholder": { "message": "E-mailadres" },
   "wizard_pass_placeholder":  { "message": "Wachtwoord" },
   "wizard_btn_signin":      { "message": "Inloggen" },

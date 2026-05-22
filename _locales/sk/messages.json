@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "fearly.eu — Skracovač URL"
+    "message": "Free and anonymous URL shortener  - Fearly.eu"
   },
   "ext_description": {
-    "message": "Okamžite skráťte URL aktívnej karty pomocou fearly.eu"
+    "message": "Skráťte ľubovoľnú URL okamžite pomocou fearly.eu — zadarmo, anonymne a súkromne."
   },
   "popup_shorten": {
     "message": "Skrátiť"
@@ -104,7 +104,7 @@
     "message": "E-mail a heslo"
   },
   "wizard_code_placeholder": {
-    "message": "Vaše 23-znakové číslo konta"
+    "message": "Vaše číslo konta"
   },
   "wizard_email_placeholder": {
     "message": "E-mailová adresa"
