@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Ďalšie možnosti čoskoro."
-  }
+  },
+
+  "tab_history": {"message": "História"},
+
+  "history_date": {"message": "Dátum"},
+
+  "history_short_code": {"message": "Krátky kód"},
+
+  "history_long_url": {"message": "Dlhé URL"},
+
+  "history_clicks": {"message": "Kliknutia"},
+
+  "history_empty": {"message": "Zatiaľ žiadne skrátené adresy URL."},
+
+  "history_error": {"message": "Históriu sa nepodarilo načítať."}
 }

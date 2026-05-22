@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Más opciones próximamente."
-  }
+  },
+
+  "tab_history": {"message": "Historial"},
+
+  "history_date": {"message": "Fecha"},
+
+  "history_short_code": {"message": "Código corto"},
+
+  "history_long_url": {"message": "URL larga"},
+
+  "history_clicks": {"message": "Clics"},
+
+  "history_empty": {"message": "Aún no hay URLs acortadas."},
+
+  "history_error": {"message": "No se pudo cargar el historial."}
 }

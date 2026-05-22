@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Więcej opcji wkrótce."
-  }
+  },
+
+  "tab_history": {"message": "Historia"},
+
+  "history_date": {"message": "Data"},
+
+  "history_short_code": {"message": "Krótki kod"},
+
+  "history_long_url": {"message": "Długi URL"},
+
+  "history_clicks": {"message": "Kliknięcia"},
+
+  "history_empty": {"message": "Brak skróconych adresów URL."},
+
+  "history_error": {"message": "Nie można załadować historii."}
 }

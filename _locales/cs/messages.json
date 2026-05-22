@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Další možnosti brzy."
-  }
+  },
+
+  "tab_history": {"message": "Historie"},
+
+  "history_date": {"message": "Datum"},
+
+  "history_short_code": {"message": "Krátký kód"},
+
+  "history_long_url": {"message": "Dlouhé URL"},
+
+  "history_clicks": {"message": "Kliknutí"},
+
+  "history_empty": {"message": "Zatím žádné zkrácené adresy URL."},
+
+  "history_error": {"message": "Historii se nepodařilo načíst."}
 }

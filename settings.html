@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>fearly.eu — Instellingen</title>
+  <title>fearly.eu — Settings</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -216,6 +216,26 @@
     .toggle input:checked + .toggle-slider { background: #7c6af7; }
     .toggle input:checked + .toggle-slider::before { transform: translateX(18px); }
 
+    /* ── History table ── */
+    .history-table {
+      width: 100%; border-collapse: collapse; font-size: 13px;
+    }
+    .history-table th {
+      text-align: left; font-size: 11px; font-weight: 600;
+      color: #555; text-transform: uppercase; letter-spacing: .6px;
+      padding: 0 8px 10px; border-bottom: 1px solid #2a2a4a;
+    }
+    .history-table td {
+      padding: 12px 8px; border-bottom: 1px solid #1e1e38;
+      vertical-align: top; color: #ccc;
+    }
+    .history-table tr:last-child td { border-bottom: none; }
+    .history-table .col-date  { white-space: nowrap; color: #888; font-size: 12px; }
+    .history-table .col-code  { font-family: monospace; color: #c4b5fd; }
+    .history-table .col-url   { word-break: break-all; max-width: 260px; color: #e0e0e0; }
+    .history-table .col-clicks { text-align: right; color: #7c6af7; font-weight: 600; white-space: nowrap; }
+    .history-empty { color: #555; font-size: 13px; text-align: center; padding: 32px 0; }
+
     /* ── Footer ── */
     .page-footer {
       margin-top: 20px;
@@ -252,7 +272,8 @@
 
   <!-- ── Main tabs ── -->
   <div class="main-tabs">
-    <button class="main-tab active" data-panel="panel-account" id="tab-main-account"></button>
+    <button class="main-tab active" data-panel="panel-account"  id="tab-main-account"></button>
+    <button class="main-tab"        data-panel="panel-history"  id="tab-main-history"></button>
     <button class="main-tab"        data-panel="panel-settings" id="tab-main-settings"></button>
   </div>
 
@@ -405,6 +426,18 @@
     </div>
 
   </div><!-- /panel-account -->
+
+  <!-- ══════════════════════════════════════════════════════
+       History panel
+  ══════════════════════════════════════════════════════ -->
+  <div class="main-panel" id="panel-history">
+    <div id="history-content">
+      <div class="spinner" id="history-loading"></div>
+    </div>
+    <div style="margin-top:20px;text-align:center">
+      <button class="btn btn-secondary" id="btn-history-dashboard" style="max-width:320px;margin:0 auto"></button>
+    </div>
+  </div><!-- /panel-history -->
 
   <!-- ══════════════════════════════════════════════════════
        Settings panel

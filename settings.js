@@ -8,6 +8,7 @@ document.querySelectorAll('.main-tab').forEach(tab => {
     document.querySelectorAll('.main-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById(tab.dataset.panel)?.classList.add('active');
+    if (tab.dataset.panel === 'panel-history') loadHistory();
   });
 });
 
@@ -89,6 +90,7 @@ function applyStaticI18n() {
   setText('lbl-save-key',    'wizard_save_key');
 
   setText('tab-main-account',    'settings_account');
+  setText('tab-main-history',    'tab_history');
   setText('tab-main-settings',   'popup_settings');
 
   setText('s-account-title',    'settings_account');
@@ -97,7 +99,8 @@ function applyStaticI18n() {
   setText('lbl-acc-key',        'settings_api_key');
   setText('btn-toggle-key',     'settings_api_key_show');
   setText('btn-copy-acc-key',   'settings_api_key_copy');
-  setText('btn-open-dashboard', 'settings_dashboard');
+  setText('btn-open-dashboard',     'settings_dashboard');
+  setText('btn-history-dashboard',  'settings_dashboard');
   setText('btn-disconnect',     'settings_logout');
 
   setText('modal-disc-title',  'settings_logout');
@@ -345,7 +348,7 @@ document.getElementById('btn-copy-acc-key').addEventListener('click', async () =
   setTimeout(() => { btn.textContent = t('settings_api_key_copy'); }, 1500);
 });
 
-document.getElementById('btn-open-dashboard').addEventListener('click', async () => {
+async function openDashboard() {
   const { api_key } = await chrome.storage.local.get('api_key');
   if (!api_key) {
     chrome.tabs.create({ url: 'https://www.fearly.eu/pages/authenticated/dashboard.html' });
@@ -362,9 +365,11 @@ document.getElementById('btn-open-dashboard').addEventListener('click', async ()
       return;
     }
   } catch (_) {}
-  // Fallback: open dashboard without auto-login
-  chrome.tabs.create({ url: 'https://www.fearly.eu/pages/authenticated/dashboard.html' });
-});
+  chrome.tabs.create({ url: 'https://www.fearly.eu/' });
+}
+
+document.getElementById('btn-open-dashboard').addEventListener('click', openDashboard);
+document.getElementById('btn-history-dashboard').addEventListener('click', openDashboard);
 
 document.getElementById('btn-disconnect').addEventListener('click', async () => {
   const { account_number } = await chrome.storage.local.get('account_number');
@@ -410,6 +415,74 @@ function flashCopy(btnId) {
   const orig = btn.textContent;
   btn.textContent = '✓ Copied';
   setTimeout(() => { btn.textContent = orig; }, 1500);
+}
+
+// ── History ───────────────────────────────────────────────────────────────
+
+let historyLoaded = false;
+
+async function loadHistory() {
+  if (historyLoaded) return;
+
+  const container = document.getElementById('history-content');
+  container.innerHTML = `<div class="spinner"></div>`;
+
+  const { api_key } = await chrome.storage.local.get('api_key');
+  if (!api_key) {
+    container.innerHTML = `<p class="history-empty">${t('history_empty')}</p>`;
+    return;
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/urls?limit=5`, {
+      headers: { 'Authorization': `Bearer ${api_key}` },
+    });
+
+    if (!res.ok) {
+      container.innerHTML = `<p class="history-empty">${t('history_error')}</p>`;
+      return;
+    }
+
+    const data = await res.json();
+    const urls = data.urls || [];
+
+    if (!urls.length) {
+      container.innerHTML = `<p class="history-empty">${t('history_empty')}</p>`;
+      return;
+    }
+
+    const rows = urls.map(u => {
+      const date = u.created_at ? u.created_at.slice(0, 10) : '—';
+      const longUrl = u.long_url.length > 60 ? u.long_url.slice(0, 57) + '…' : u.long_url;
+      return `<tr>
+        <td class="col-date">${date}</td>
+        <td class="col-code">${escHtml(u.short_code)}</td>
+        <td class="col-url"  title="${escHtml(u.long_url)}">${escHtml(longUrl)}</td>
+        <td class="col-clicks">${u.click_count ?? 0}</td>
+      </tr>`;
+    }).join('');
+
+    container.innerHTML = `
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>${t('history_date')}</th>
+            <th>${t('history_short_code')}</th>
+            <th>${t('history_long_url')}</th>
+            <th style="text-align:right">${t('history_clicks')}</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+    historyLoaded = true;
+  } catch (_) {
+    container.innerHTML = `<p class="history-empty">${t('history_error')}</p>`;
+  }
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 init();

@@ -79,5 +79,13 @@
   "error_rate_limit":    { "message": "Te veel pogingen. Probeer later opnieuw." },
   "error_generic":       { "message": "Er ging iets mis. Probeer opnieuw." },
 
-  "label_extension": { "message": "Chrome Extensie" }
+  "label_extension": { "message": "Chrome Extensie" },
+
+  "tab_history":        { "message": "Geschiedenis" },
+  "history_date":       { "message": "Datum" },
+  "history_short_code": { "message": "Kortcode" },
+  "history_long_url":   { "message": "Lange URL" },
+  "history_clicks":     { "message": "Kliks" },
+  "history_empty":      { "message": "Nog geen URL's verkort." },
+  "history_error":      { "message": "Geschiedenis kon niet worden geladen." }
 }

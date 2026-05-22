@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Több lehetőség hamarosan."
-  }
+  },
+
+  "tab_history": {"message": "Előzmények"},
+
+  "history_date": {"message": "Dátum"},
+
+  "history_short_code": {"message": "Rövid kód"},
+
+  "history_long_url": {"message": "Hosszú URL"},
+
+  "history_clicks": {"message": "Kattintások"},
+
+  "history_empty": {"message": "Még nincs rövidített URL."},
+
+  "history_error": {"message": "Az előzmények betöltése nem sikerült."}
 }

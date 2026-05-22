@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Weitere Optionen folgen bald."
-  }
+  },
+
+  "tab_history": {"message": "Verlauf"},
+
+  "history_date": {"message": "Datum"},
+
+  "history_short_code": {"message": "Kurzcode"},
+
+  "history_long_url": {"message": "Lange URL"},
+
+  "history_clicks": {"message": "Klicks"},
+
+  "history_empty": {"message": "Noch keine URLs verkürzt."},
+
+  "history_error": {"message": "Verlauf konnte nicht geladen werden."}
 }

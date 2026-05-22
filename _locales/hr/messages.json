@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Više opcija uskoro."
-  }
+  },
+
+  "tab_history": {"message": "Povijest"},
+
+  "history_date": {"message": "Datum"},
+
+  "history_short_code": {"message": "Kratki kod"},
+
+  "history_long_url": {"message": "Duga URL"},
+
+  "history_clicks": {"message": "Klikovi"},
+
+  "history_empty": {"message": "Još nema skraćenih URL-ova."},
+
+  "history_error": {"message": "Nije moguće učitati povijest."}
 }

@@ -198,5 +198,19 @@
   },
   "settings_no_options": {
     "message": "Altre opzioni in arrivo."
-  }
+  },
+
+  "tab_history": {"message": "Cronologia"},
+
+  "history_date": {"message": "Data"},
+
+  "history_short_code": {"message": "Codice breve"},
+
+  "history_long_url": {"message": "URL lungo"},
+
+  "history_clicks": {"message": "Clic"},
+
+  "history_empty": {"message": "Nessun URL abbreviato ancora."},
+
+  "history_error": {"message": "Impossibile caricare la cronologia."}
 }

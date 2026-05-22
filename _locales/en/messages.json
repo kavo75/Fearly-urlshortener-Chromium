@@ -79,5 +79,13 @@
   "error_rate_limit":    { "message": "Too many attempts. Try again later." },
   "error_generic":       { "message": "Something went wrong. Please try again." },
 
-  "label_extension": { "message": "Chrome Extension" }
+  "label_extension": { "message": "Chrome Extension" },
+
+  "tab_history":        { "message": "History" },
+  "history_date":       { "message": "Date" },
+  "history_short_code": { "message": "Short code" },
+  "history_long_url":   { "message": "Long URL" },
+  "history_clicks":     { "message": "Clicks" },
+  "history_empty":      { "message": "No URLs shortened yet." },
+  "history_error":      { "message": "Could not load history." }
 }
