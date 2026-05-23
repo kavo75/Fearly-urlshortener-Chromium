@@ -124,7 +124,8 @@ document.getElementById('btn-settings').addEventListener('click', () => {
 });
 
 // Not-setup buttons
-document.getElementById('btn-has-account').addEventListener('click', () => {
+document.getElementById('btn-has-account').addEventListener('click', async () => {
+  await chrome.storage.local.set({ pending_step: 'signin' });
   chrome.runtime.openOptionsPage();
 });
 

@@ -25,10 +25,13 @@ async function init() {
   buildLangSelector();
   applyStaticI18n();
 
-  const storage = await chrome.storage.local.get(['api_key', 'account_number', 'account_type', 'tier_name']);
+  const storage = await chrome.storage.local.get(['api_key', 'account_number', 'account_type', 'tier_name', 'pending_step']);
 
   if (storage.api_key && storage.account_number) {
     showAccountView(storage);
+  } else if (storage.pending_step === 'signin') {
+    await chrome.storage.local.remove('pending_step');
+    showStep('step-2');
   } else {
     showStep('step-1');
   }
